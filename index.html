@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Guess the number</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel="stylesheet" type="text/css" media="screen" href="responsive.css">
+    <script src='main.js'></script>
+</head>
+<body>
+   
+    <div id="contains">
+        <div id="nav-text">
+        <h1 id="heading" >Guess My Number</h1>
+        <p id="rules">I have a random number  between 0 - 100<br><br>dare to guess?</p>
+       </div>
+       <div class="inputs">
+        <p id="info-number"></p>
+      <input class="input-number" id="input-number" type="text">
+      <p id="caption">Total number of Attempts :</p>
+      <p id="score">Score :</p>
+       </div>
+       <button class="btn1" id="btn1" onclick="func()">Guess</button>
+       <button class="btn" type="reset" onclick="clear1()">New Game</button>
+    </div>
+<script>
+    function clear1(){
+        document.getElementById("info-number").innerHTML= ``;
+    document.getElementById("caption").innerHTML =`Total number of Attempts :`;
+    document.getElementById("score").innerHTML =`Score :`;
+    a=Math.floor(Math.random()*100)+1;
+    score=0;
+    count=0;
+    document.getElementById('input-number').value=``;
+    document.getElementById('btn1').disabled=false;
+    }
+    function  gameFinish(){
+        document.getElementById("info-number").innerHTML= ``;
+    document.getElementById("caption").innerHTML =`Total number of Attempts :`;
+    document.getElementById("score").innerHTML =`Score :`;
+    a=Math.floor(Math.random()*100)+1;
+    score=0;
+    count=0;
+    document.getElementById('input-number').value=``;
+    document.getElementById('btn1').disabled=false;
+    }
+</script>
+</body>
+</html>
